@@ -1,0 +1,50 @@
+// Displayer.java - ver 1.00 //
+
+/* To display the grid with the given 2D array */
+public class Displayer
+{
+   public Displayer()
+   {
+   }
+   
+   /* Takes in the 2D grid and displays the contains as a 
+    * grid on the screen, for players to see the current state
+    * 
+    * @param grid - The 2D array that contains Disc objects */
+   public void DisplayGrid(Disc[][] grid) 
+   {
+     
+     
+     for (int row = 0 ; row <ConnectFour.GRID_HEIGHT ;row++)
+     {
+       System.out.print("    ------------------------------------\n    |");
+       for (int col=0;col<ConnectFour.GRID_WIDTH ; col++)
+       {
+         if (grid[row][col] != null)
+         {
+           if ( grid[row][col].GetDiscType()==Disc.X_DISC)
+           {
+             System.out.print(" X  |");
+           }
+           else if (grid[row][col].GetDiscType()==Disc.O_DISC)
+           {
+             System.out.print(" O  |");
+           }
+         }
+         else
+         {
+           System.out.print("    |");
+         }
+       }
+       System.out.println("");
+     }
+     System.out.println("    ------------------------------------");
+     System.out.println("COL   1    2    3    4    5    6    7");
+   }
+   public void Header ()
+   {
+     System.out.println("==============================");
+     System.out.println("|       CONNECT   FOUR       |");
+     System.out.println("==============================");
+   }
+}
