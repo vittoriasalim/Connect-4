@@ -18,7 +18,7 @@ public class ConnectFour
   }
   
   //====================== PRIVATE METHOD =======================//
-  /* PLACE YOUR PRIVATE METHODS HERE (NOT PRIVATE VARIABLES) */
+ 
   
   
   //private method to check winner from horizontal win
